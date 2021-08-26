@@ -1,0 +1,18 @@
+[user]
+	name = Mauricio Blum
+	email = mauriciocblum@gmail.com
+[alias]
+co = checkout
+br = branch
+ci = commit
+st = status
+unstage = reset HEAD --
+last = log -1 HEAD
+hardcommit = commit -n
+hardpush = push --no-verify
+devpull = "!git checkout develop && git pull && git checkout - && git merge develop"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
